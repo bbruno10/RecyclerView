@@ -40,9 +40,7 @@ class ContactListAdapter :
             tvPhone.text = contact.phone
             image.setImageResource(contact.icon)
 
-
         }
-
     }
 
     class ContactDiffUltils : DiffUtil.ItemCallback<Contact>() {
