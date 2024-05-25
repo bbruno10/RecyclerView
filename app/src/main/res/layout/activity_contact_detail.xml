@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactDetailActivity">
+
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_nome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_avatar"
+        app:layout_constraintTop_toTopOf="@+id/iv_avatar"
+        tools:text="Name" />
+
+    <TextView
+        android:id="@+id/tv_numero"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_nome"
+        app:layout_constraintStart_toStartOf="@+id/tv_nome"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nome"
+        tools:text="(81) 99999-9999" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:src="@drawable/baseline_auto_delete_24"
+        app:layout_constraintEnd_toStartOf="@+id/guide_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_avatar"
+        app:tint="#E50E0E" />
+    ®
+
+    <ImageView
+        android:id="@+id/iv_ligar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:src="@drawable/baseline_phone_enabled_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guide_line"
+        app:layout_constraintTop_toBottomOf="@+id/iv_avatar"
+        app:tint="@android:color/holo_green_dark" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:padding="8dp"
+        android:text="Send Message"
+        android:textColor="#0000FF"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_delete" />
+
+    <TextView
+        android:id="@+id/tv_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:padding="8dp"
+        android:text="Share Contact"
+        android:textColor="#0000FF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_message"
+        app:layout_constraintStart_toStartOf="@+id/tv_message"
+        app:layout_constraintTop_toBottomOf="@+id/tv_message" />
+
+    <TextView
+        android:id="@+id/tv_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:padding="8dp"
+        android:text="Block contact"
+        android:textColor="#E50E0E"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_share"
+        app:layout_constraintStart_toStartOf="@+id/tv_share"
+        app:layout_constraintTop_toBottomOf="@+id/tv_share" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
